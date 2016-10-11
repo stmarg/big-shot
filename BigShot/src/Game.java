@@ -31,8 +31,9 @@ public class Game extends SimpleApp
 	public void draw(GraphicsContext gc)
 	{
 		gc.fillText("Hello Everyone!", getWidth()/2, getHeight()/2);
+		gc.fillText("I'm Kevin", getWidth()/2, getHeight()/2 + 100);
 	}
-
+	
 	/**
 	 * This is automatically called on a regular interval. It is on a separate thread from the draw.
 	 * @param millis The amount of time in milliseconds since the last time this updateAnimation method was called.
