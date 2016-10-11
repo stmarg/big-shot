@@ -30,7 +30,7 @@ public class Game extends SimpleApp
 	 */
 	public void draw(GraphicsContext gc)
 	{
-		gc.fillText("Hello Everyone!", getWidth()/2, getHeight()/2);
+		gc.fillText("Hello Everyone! How are we doing?", getWidth()/2, getHeight()/2);
 		gc.fillText("I'm Kevin", getWidth()/2, getHeight()/2 + 100);
 	}
 	
