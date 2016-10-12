@@ -10,32 +10,39 @@ import javafx.scene.image.Image;
  * @author Mr. Sinnott
  *
  */
-public class Game extends SimpleApp
-{	
+public class Game extends SimpleApp {
 	Image piano = new Image("Golden Piano.png");
-	public void setupApp(GraphicsContext gc)
-	{
+	Image d = new Image("Devil.png");
+	int x;
+
+	public void setupApp(GraphicsContext gc) {
 		gc.setFont(new Font(50));
 		gc.setTextAlign(TextAlignment.CENTER);
-	}
-	
-	public void draw(GraphicsContext gc)
-	{
-		gc.drawImage(piano, 0, 0,800,800);
-		gc.setFill(Color.LIGHTBLUE);
-		gc.fillOval( (getWidth()/2)-400,getHeight()/2-100, 800, 200);
-		gc.setFill(Color.MEDIUMVIOLETRED);
-		gc.fillText("This is a coding project. yay", getWidth()/2, getHeight()/4);
-		gc.fillText("Hello Everyone! How are we doing?", getWidth()/2, getHeight()/2);
-		gc.fillText("I'm Julia & Madi & Kevin!", getWidth()/2, getHeight()/2 + 100);
-	}
-	
-	public void updateAnimation(long millis)
-	{
+		x = 1;
 	}
 
-	public static void main(String[] args)
-	{
+	public void draw(GraphicsContext gc) {
+		gc.drawImage(piano, 0, 0, 800, 800);
+		gc.setFill(Color.LIGHTBLUE);
+		gc.fillOval((getWidth() / 2) - 400, getHeight() / 2 - 100, 800, 200);
+		gc.setFill(Color.MEDIUMVIOLETRED);
+		gc.fillText("This is a coding project. yay", getWidth() / 2, getHeight() / 4);
+		gc.fillText("Hello Everyone! How are we doing?", getWidth() / 2, getHeight() / 2);
+		gc.fillText("I'm Julia & Madi & Kevin!", getWidth() / 2, getHeight() / 2 + 100);
+
+		gc.drawImage(d, x, 0, 100, 100);
+
+		x = x + 5;
+		
+		if (x > 900) {
+			x = 1;
+		}
+	}
+
+	public void updateAnimation(long millis) {
+	}
+
+	public static void main(String[] args) {
 		launch();
 	}
 }
