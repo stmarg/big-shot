@@ -11,24 +11,14 @@ import javafx.scene.image.Image;
  *
  */
 public class Game extends SimpleApp
-{
-	/**
-	 * Sets up the initial state of the game
-	 * @param gc The GraphicsContext that all drawing will be done to. 
-	 */
-	
+{	
 	Image piano = new Image("Golden Piano.png");
 	public void setupApp(GraphicsContext gc)
 	{
 		gc.setFont(new Font(50));
 		gc.setTextAlign(TextAlignment.CENTER);
-		
 	}
 	
-	/**
-	 * Called automatically every draw cycle. Any drawing done to the specified Graphics Context will show on the screen
-	 * @param gc The GraphicsContext onto which all drawing should be done.
-	 */
 	public void draw(GraphicsContext gc)
 	{
 		gc.setFill(Color.BLACK);
@@ -42,10 +32,6 @@ public class Game extends SimpleApp
 		gc.fillText("I'm Julia & Madi & Kevin!", getWidth()/2, getHeight()/2 + 100);
 	}
 	
-	/**
-	 * This is automatically called on a regular interval. It is on a separate thread from the draw.
-	 * @param millis The amount of time in milliseconds since the last time this updateAnimation method was called.
-	 */
 	public void updateAnimation(long millis)
 	{
 	}
@@ -54,5 +40,4 @@ public class Game extends SimpleApp
 	{
 		launch();
 	}
-
 }
