@@ -39,7 +39,7 @@ public class Game extends SimpleApp
 		
 		gc.drawImage(piano, 100, 100);
 		gc.fillText("Hello Everyone! How are we doing?", getWidth()/2, getHeight()/2);
-		gc.fillText("I'm Julia", getWidth()/2, getHeight()/2 + 100);
+		gc.fillText("I'm Julia & Madi", getWidth()/2, getHeight()/2 + 100);
 	}
 	
 	/**
