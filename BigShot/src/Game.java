@@ -31,17 +31,15 @@ public class Game extends SimpleApp
 	 */
 	public void draw(GraphicsContext gc)
 	{
-
 		gc.setFill(Color.BLACK);
 		gc.fillOval( (getWidth()/2)-400,getHeight()/2-100, 800, 200);
 		gc.setFill(Color.MEDIUMVIOLETRED);
 		gc.fillText("This is a coding project. yay", getWidth()/2, getHeight()/2);
 		//This draws a black rectangle
 		
-
 		gc.drawImage(piano, 100, 100);
 		gc.fillText("Hello Everyone! How are we doing?", getWidth()/2, getHeight()/2);
-		gc.fillText("I'm Kevin", getWidth()/2, getHeight()/2 + 100);
+		gc.fillText("I'm Julia", getWidth()/2, getHeight()/2 + 100);
 	}
 	
 	/**
