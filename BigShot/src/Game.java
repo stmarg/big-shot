@@ -23,7 +23,7 @@ public class Game extends SimpleApp {
 	}
 
 	public void draw(GraphicsContext gc) {
-		gc.setFill(Color.color(1, 1, 1,0.25));
+
 		gc.setGlobalAlpha(0.25);
 		gc.drawImage(piano, 0, 0, getWidth(), getWidth());
 		gc.setGlobalAlpha(1);
