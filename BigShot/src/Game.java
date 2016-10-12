@@ -19,10 +19,14 @@ public class Game extends SimpleApp {
 		gc.setFont(new Font(50));
 		gc.setTextAlign(TextAlignment.CENTER);
 		x = 1;
+
 	}
 
 	public void draw(GraphicsContext gc) {
-		gc.drawImage(piano, 0, 0, 800, 800);
+		gc.setFill(Color.color(1, 1, 1,0.25));
+		gc.setGlobalAlpha(0.25);
+		gc.drawImage(piano, 0, 0, getWidth(), getWidth());
+		gc.setGlobalAlpha(1);
 		gc.setFill(Color.LIGHTBLUE);
 		gc.fillOval((getWidth() / 2) - 400, getHeight() / 2 - 100, 800, 200);
 		gc.setFill(Color.MEDIUMVIOLETRED);
@@ -32,11 +36,9 @@ public class Game extends SimpleApp {
 
 		gc.drawImage(d, x, 0, 100, 100);
 
-		x = x + 5;
+		x = (x + 5+getWidth())%getWidth();
 		
-		if (x > 900) {
-			x = 1;
-		}
+		
 	}
 
 	public void updateAnimation(long millis) {
