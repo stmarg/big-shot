@@ -1,5 +1,6 @@
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.TextAlignment;
@@ -62,5 +63,10 @@ public class Game extends SimpleApp {
 
 	public static void main(String[] args) {
 		launch();
+	}
+	
+	public void onMousePressed(MouseEvent me) {
+		tx = me.getX();
+		ty = me.getY();
 	}
 }
