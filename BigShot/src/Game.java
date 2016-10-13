@@ -19,6 +19,9 @@ public class Game extends SimpleApp {
 	private double y;
 	private double tx;
 	private double ty;
+	private double deltax;
+    private double deltay;
+    private double angle;
 
 	public void setupApp(GraphicsContext gc) {
 		gc.setFont(new Font(50));
@@ -42,21 +45,8 @@ public class Game extends SimpleApp {
 
 		gc.drawImage(sanic, x - 50, y - 50, 100, 100);
 		
-		if (tx > x) {
-			x = x + 5;
-		}
-		 
-		if (tx < x) {
-			x = x - 5;
-		}
-		
-		if (ty > y) {
-			y = y + 5;
-		}
-		
-		if (ty < y) {
-			y = y - 5;
-		}
+		x = x - Math.cos(angle) * 5;
+	    y = y - Math.sin(angle) * 5;
 	}
 
 	public void updateAnimation(long millis) {
@@ -69,5 +59,9 @@ public class Game extends SimpleApp {
 	public void onMousePressed(MouseEvent me) {
 		tx = me.getX();
 		ty = me.getY();
+		deltax = x - tx;
+	    deltay = y - ty;
+	    double theta = Math.atan2(deltay, deltax);
+	    angle = theta;
 	}
 }
