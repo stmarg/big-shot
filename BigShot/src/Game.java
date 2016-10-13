@@ -12,7 +12,7 @@ import javafx.scene.image.Image;
  *
  */
 public class Game extends SimpleApp {
-	Image piano = new Image("Golden Piano.png");
+	Image puppy = new Image("Puppy.jpg");
 	Image d = new Image("Devil.png");
 	
 	private double x;
@@ -30,11 +30,11 @@ public class Game extends SimpleApp {
 	public void draw(GraphicsContext gc) {
 
 		gc.setGlobalAlpha(0.25);
-		gc.drawImage(piano, 0, 0, getWidth(), getWidth());
+		gc.drawImage(puppy, 0, 0, getWidth(), getWidth());
 		gc.setGlobalAlpha(1);
-		gc.setFill(Color.LIGHTBLUE);
-		gc.fillOval((getWidth() / 2) - 400, getHeight() / 2 - 100, 800, 200);
-		gc.setFill(Color.MEDIUMVIOLETRED);
+		//gc.setFill(Color.LIGHTGREEN);
+		//gc.fillRect((getWidth() / 2) - 400, getHeight() / 2 - 100, 800, 200);
+		gc.setFill(Color.BLUE);
 		gc.fillText("Click anywhere to move the devil - Kevin", getWidth() / 2, getHeight() / 4);
 		gc.fillText("Hello Everyone! How are we doing?", getWidth() / 2, getHeight() / 2);
 		gc.fillText("I'm Julia & Madi & Kevin!", getWidth() / 2, getHeight() / 2 + 100);
