@@ -19,8 +19,10 @@ public class Game extends SimpleApp {
 	private double y;
 	private double tx;
 	private double ty;
+	//private double speedX = 0;
+//	private double speedY = 0;
 	private double deltax;
-    private double deltay;
+   private double deltay;
     private double angle;
 
 	public void setupApp(GraphicsContext gc) {
@@ -40,13 +42,15 @@ public class Game extends SimpleApp {
 		gc.setFill(Color.BLUE);
 		gc.fillText("Click anywhere to move the devil - Kevin", getWidth() / 2, getHeight() / 4);
 		gc.fillText("Hello Everyone! How are we doing?", getWidth() / 2, getHeight() / 2);
-		gc.fillText("I'm Julia & Madi & Kevin!", getWidth() / 2, getHeight() / 2 + 100);
+		gc.fillText("I'm Julia & Madi & Kevin!", getWidth() / 2, getHeight()*0.66);
 		gc.fillText("gotta go fast", tx,ty);
-
 		gc.drawImage(sanic, x - 50, y - 50, 100, 100);
 		
-		x = x - Math.cos(angle) * 5;
-	    y = y - Math.sin(angle) * 5;
+		//x = x - Math.cos(angle) * 5;
+	   // y = y - Math.sin(angle) * 5;
+		x=(x+deltax + getWidth()) % getWidth();
+		y=(y+deltay + getHeight()) % getHeight();
+		
 	}
 
 	public void updateAnimation(long millis) {
@@ -59,9 +63,9 @@ public class Game extends SimpleApp {
 	public void onMousePressed(MouseEvent me) {
 		tx = me.getX();
 		ty = me.getY();
-		deltax = x - tx;
-	    deltay = y - ty;
-	    double theta = Math.atan2(deltay, deltax);
-	    angle = theta;
+	    angle = Math.atan2( ty-y,  tx-x);
+	    deltax =Math.cos(angle) * 5;
+	    deltay =Math.sin(angle) * 5;
+	    
 	}
 }
