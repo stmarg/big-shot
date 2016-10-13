@@ -12,9 +12,9 @@ import javafx.scene.image.Image;
  *
  */
 public class Game extends SimpleApp {
-	Image puppy = new Image("Puppy.jpg");
+	Image puppy = new Image("memelord.jpg");
 	Image d = new Image("Devil.png");
-	
+	Image sanic = new Image("sanic.png");
 	private double x;
 	private double y;
 	private double tx;
@@ -40,7 +40,7 @@ public class Game extends SimpleApp {
 		gc.fillText("I'm Julia & Madi & Kevin!", getWidth() / 2, getHeight() / 2 + 100);
 		gc.fillText("gotta go fast", tx,ty);
 
-		gc.drawImage(d, x - 50, y - 50, 100, 100);
+		gc.drawImage(sanic, x - 50, y - 50, 100, 100);
 		
 		if (tx > x) {
 			x = x + 5;
