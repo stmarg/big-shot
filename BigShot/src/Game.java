@@ -34,7 +34,7 @@ public class Game extends SimpleApp {
 		gc.setGlobalAlpha(1);
 		//gc.setFill(Color.LIGHTGREEN);
 		//gc.fillRect((getWidth() / 2) - 400, getHeight() / 2 - 100, 800, 200);
-		gc.setFill(Color.PURPLE);
+		gc.setFill(Color.BLUE);
 		gc.fillText("Click anywhere to move the devil - Kevin", getWidth() / 2, getHeight() / 4);
 		gc.fillText("Hello Everyone! How are we doing?", getWidth() / 2, getHeight() / 2);
 		gc.fillText("I'm Julia & Madi & Kevin!", getWidth() / 2, getHeight() / 2 + 100);
