@@ -45,7 +45,7 @@ public class Game extends SimpleApp {
 		g = 140;
 		b = 0;
 		
-		buggy = new Bug (getWidth()/4, getHeight()/2,100);
+		buggy = new Bug (getWidth()/4, getHeight()/4,100);
 		buggy.moveTowards(getWidth()/2, getHeight()/2);
 	}
 
