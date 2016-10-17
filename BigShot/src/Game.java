@@ -67,6 +67,8 @@ public class Game extends SimpleApp {
 		sx = (sx + sdeltax + getWidth()) % getWidth();
 		sy = (sy + sdeltay + getHeight()) % getHeight();
 		
+		//Do we need to do this 60 times a second? Doing trig like this in a draw will usually kill performance.
+		//could we just have shrek head towards sonic's position by doing something with the detas, slope, and speed of shrek (maybe not, but maybe)?
 		sangle = Math.atan2(y - sy, x - sx);
 		sdeltax = Math.cos(sangle) * 3;
 		sdeltay = Math.sin(sangle) * 3;
