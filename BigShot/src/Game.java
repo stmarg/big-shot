@@ -52,7 +52,7 @@ public class Game extends SimpleApp {
 		gc.setFill(Color.BLUE);
 		gc.fillText("Click Anywhere to Move the Sanic - Kevin", getWidth() / 2, getHeight() / 4);
 		gc.fillText("Hello Everyone! How are we doing?", getWidth() / 2, getHeight() / 2);
-		gc.fillText("I'm Julia & Madi & Kevin & charlie!", getWidth() / 2, getHeight() * 0.66);
+		gc.fillText("I'm Julia & Madi & Kevin & Charlie!", getWidth() / 2, getHeight() * 0.66);
 		
 		//gc.setFill(Color.DARKORANGE);
 		gc.setFill(Color.rgb(r, g, b));
