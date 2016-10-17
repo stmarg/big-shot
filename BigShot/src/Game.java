@@ -32,6 +32,8 @@ public class Game extends SimpleApp {
 	private int r;
 	private int g;
 	private int b;
+	
+	private Bug buggy;
 
 	public void setupApp(GraphicsContext gc) {
 		gc.setFont(new Font(50));
@@ -42,6 +44,8 @@ public class Game extends SimpleApp {
 		r = 255;
 		g = 140;
 		b = 0;
+		
+		buggy = new Bug (getWidth()/4, getHeight()/2,100);
 	}
 
 	public void draw(GraphicsContext gc) {
@@ -72,6 +76,9 @@ public class Game extends SimpleApp {
 		sangle = Math.atan2(y - sy, x - sx);
 		sdeltax = Math.cos(sangle) * 3;
 		sdeltay = Math.sin(sangle) * 3;
+		
+		buggy.draw(gc);
+		
 	}
 
 	public void updateAnimation(long millis) {
