@@ -76,6 +76,7 @@ public class Game extends SimpleApp {
 	}
 
 	public static void main(String[] args) {
+		System.out.println("Please work... *cries*");  
 		launch();
 	}
 
