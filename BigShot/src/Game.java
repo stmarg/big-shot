@@ -45,7 +45,7 @@ public class Game extends SimpleApp {
 		g = 140;
 		b = 0;
 		
-		buggy = new Bug (getWidth()/4, getHeight()/4,100);
+		buggy = new Bug (getWidth()/4, getHeight()/4,175);
 		buggy.moveTowards(getWidth()/2, getHeight()/2);
 	}
 
@@ -101,4 +101,13 @@ public class Game extends SimpleApp {
 		g = (int)(Math.random() * 255) + 1;
 		b = (int)(Math.random() * 255) + 1;
 	}
+	
+	/**
+	 * @override
+	 */
+	public void onMouseMove(MouseEvent me)
+	{
+		buggy.moveTowards(me.getX(), me.getY());
+	}
+
 }

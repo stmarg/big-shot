@@ -1,4 +1,5 @@
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.effect.BlendMode;
 import javafx.scene.image.Image;
 
 public class Bug
@@ -30,12 +31,15 @@ public class Bug
 	
 	public void draw(GraphicsContext gc)
 	{
+		BlendMode bm = gc.getGlobalBlendMode();
+		gc.setGlobalBlendMode(BlendMode.MULTIPLY);
 		gc.translate(x, y);
 		gc.rotate(ang+90);
 		gc.drawImage(img,-w/2, -h/2);
 		gc.rotate(-ang-90);
 		gc.translate(-(x), -(y));
 		updatePosition();
+		gc.setGlobalBlendMode(bm);
 	}
 	
 	private void updatePosition()
@@ -50,12 +54,12 @@ public class Bug
 		
 		if (Math.abs(tx-x)>10)
 		{
-			x += (tx-x) * 0.025;
+			x += (tx-x) * 0.02;
 		}
 		
 		if (Math.abs(ty-y) > 10)
 		{
-			y+=(ty-y)*0.025;
+			y+=(ty-y)*0.02;
 		}
 	}
 	
